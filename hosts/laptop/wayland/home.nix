@@ -15,6 +15,10 @@
   };
   programs = {
     home-manager.enable = true;
+    nix-index = {
+      enable = true;
+      enable<SHELL>Integration = true;
+    };
   };
 
   home.stateVersion = "22.11";
