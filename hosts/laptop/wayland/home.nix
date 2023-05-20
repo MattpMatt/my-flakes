@@ -17,7 +17,7 @@
     home-manager.enable = true;
     nix-index = {
       enable = true;
-      enable<SHELL>Integration = true;
+      enableFishIntegration = true;
     };
   };
 

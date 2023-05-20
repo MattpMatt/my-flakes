@@ -17,7 +17,7 @@
     # shell = pkgs.fish;
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "libvirtd" "video" "audio" ];
-    packages = (with pkgs; [ discord-canary ])
+    packages = (with pkgs; [ discord-canary ]);
   };
   boot = {
     supportedFilesystems = [ "ntfs" ];
@@ -41,10 +41,10 @@
     initrd.verbose = false;
   };
 
-#  i18n.inputMethod = {
-#    enabled = "fcitx5";
-#    fcitx5.addons = with pkgs; [ fcitx5-rime fcitx5-chinese-addons fcitx5-table-extra fcitx5-pinyin-moegirl fcitx5-pinyin-zhwiki ];
-#  };
+  #  i18n.inputMethod = {
+  #    enabled = "fcitx5";
+  #    fcitx5.addons = with pkgs; [ fcitx5-rime fcitx5-chinese-addons fcitx5-table-extra fcitx5-pinyin-moegirl fcitx5-pinyin-zhwiki ];
+  #  };
 
   environment = {
     persistence."/nix/persist" = {

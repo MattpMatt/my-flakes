@@ -4,6 +4,7 @@
   outputs = inputs @ { self, nixpkgs, flake-parts, ... }:
     let
       user = "spo";
+      selfPkgs = import ./pkgs;
     in
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" ];
@@ -26,6 +27,7 @@
         };
 
       flake = {
+        overlays.default = selfPkgs.overlay;
         nixosConfigurations = (
           import ./hosts {
             system = "x86_64-linux";
