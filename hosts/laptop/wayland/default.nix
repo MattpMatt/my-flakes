@@ -17,7 +17,9 @@
     # shell = pkgs.fish;
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "libvirtd" "video" "audio" ];
-    packages = (with pkgs; [ discord-canary ]);
+    packages = (with pkgs; [
+      discord-canary
+    ]);
   };
   boot = {
     supportedFilesystems = [ "ntfs" ];
@@ -100,7 +102,6 @@
       pulsemixer
       linux-firmware
       sshpass
-      pkgs.rust-bin.stable.latest.default
       lxappearance
       imagemagick
       pkgs.sway-contrib.grimshot

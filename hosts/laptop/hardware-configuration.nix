@@ -5,7 +5,8 @@
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
+    [
+      (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
@@ -14,29 +15,34 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "none";
+    {
+      device = "none";
       fsType = "tmpfs";
       options = [ "defaults" "size=4G" "mode=755" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/C91B-42AC";
+    {
+      device = "/dev/disk/by-uuid/BCD7-7072";
       fsType = "vfat";
     };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/575ceec9-10f5-44b0-9c99-8a145d103000";
+    {
+      device = "/dev/disk/by-uuid/0cbf3bed-cf0a-4216-87ad-58171fdadd42";
       fsType = "ext4";
     };
 
   fileSystems."/etc/nixos" =
-    { device = "/nix/persist/etc/nixos";
+    {
+      device = "/nix/persist/etc/nixos";
       fsType = "none";
       options = [ "bind" ];
     };
 
   fileSystems."/var/log" =
-    { device = "/nix/persist/var/log";
+    {
+      device = "/nix/persist/var/log";
       fsType = "none";
       options = [ "bind" ];
     };

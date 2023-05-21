@@ -38,6 +38,7 @@ in
         nixpkgs = {
           overlays =
             [
+              self.overlays.default
               inputs.neovim-nightly-overlay.overlay
               inputs.picom.overlays.default
             ];

@@ -15,6 +15,7 @@
   home.file.".config/fish/functions/n.fish".text = import ./functions/n.nix;
   home.file.".config/fish/functions/r.fish".text = import ./functions/r.nix;
   home.file.".config/fish/functions/ls.fish".text = import ./functions/ls.nix;
+  home.file.".config/fish/functions/lg.fish".text = import ./functions/lg.nix;
   home.file.".config/fish/functions/nf.fish".text = import ./functions/nf.nix;
   home.file.".config/fish/functions/vi.fish".text = import ./functions/vi.nix;
   home.file.".config/fish/functions/top.fish".text = import ./functions/top.nix;

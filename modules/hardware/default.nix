@@ -1,5 +1,5 @@
 [
-  ./nvidia.nix
+  # ./nvidia.nix
   # ./hotspot.nix
   ./bluetooth.nix
 ]

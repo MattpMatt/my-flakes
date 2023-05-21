@@ -51,6 +51,7 @@
     ];
   };
   services.dbus.enable = true;
+  #systemd.services.nix-daemon.environment.TMPDIR = "/nix/tmp/nix-daemon";
 
   nix = {
     settings = {

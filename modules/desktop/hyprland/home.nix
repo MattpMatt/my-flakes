@@ -19,7 +19,7 @@
     systemdIntegration = true;
     nvidiaPatches = false;
     extraConfig = ''
-      $mainMod = Super_L 
+      $mainMod = SUPER 
       # $scripts=$HOME/.config/hypr/scripts
 
       monitor=,preferred,auto,1 
@@ -149,8 +149,7 @@
 
       bind = $mainMod, Z, exec, kitty fish
       bind = $mainMod SHIFT, Z, exec, kitty --class="termfloat" fish
-      bind = $mainMod SHIFT, P, killactive,
-      bind = $mainMod SHIFT, X, exit,
+      bind = $mainMod SHIFT, X, killactive,
       bind = $mainMod SHIFT, Space, togglefloating,
       bind = $mainMod,F,fullscreen
       bind = $mainMod,Y,pin
@@ -255,16 +254,12 @@
       # quickly launch program #
       #------------------------# 
       bind=$mainMod,B,exec,nvidia-offload firefox
-      #bind=$mainMod,M,exec,netease-cloud-music-gtk4 
-      #bind=$mainMod SHIFT,M,exec,kitty --class="musicfox" --hold sh -c "musicfox" 
-      #bind=$mainMod SHIFT,D,exec,kitty  --class="danmufloat" --hold sh -c "cd /home/ruixi/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && go run main.go -c config.toml"
-      bind=$mainMod SHIFT,X,exec,myswaylock
       bind=$mainMod,D,exec,discord-canary
       bind=$mainMod,bracketleft,exec,grimblast --notify --cursor  copysave area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
       bind=$mainMod,bracketright,exec, grimblast --notify --cursor  copy area
       bind=$mainMod,A,exec, grimblast_watermark
-      bind=,Super_L,exec, pkill rofi || ~/.config/rofi/launcher.sh
-      bind=$mainMod,Super_L,exec, bash ~/.config/rofi/powermenu.sh
+      bind=$mainMod,Space,exec, pkill rofi || ~/.config/rofi/launcher.sh
+      bind=$mainMod,escape,exec, bash ~/.config/rofi/powermenu.sh
 
       #-----------------------------------------#
       # control volume,brightness,media players-#
